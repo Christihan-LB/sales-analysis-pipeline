@@ -1,1 +1,3 @@
-# sales-analysis-pipeline
+# Sales Analysis Pipeline
+
+Initial project setup.
