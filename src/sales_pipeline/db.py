@@ -1,6 +1,6 @@
 import sqlite3
 import pandas as pd
-from .config import PROCESSED_DATA_DIR
+from ..config import PROCESSED_DATA_DIR
 
 DB_FILE = f"{PROCESSED_DATA_DIR}/ventas.db"
 

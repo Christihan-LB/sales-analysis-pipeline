@@ -19,7 +19,8 @@ def revenue_per_month(df: pd.DataFrame) -> pd.DataFrame:
     """
     Return DataFrame with monthly revenue totals.
     """
-    df["mes"] = df["fecha"].dt.to_period("M")
-    monthly = df.groupby("mes")["total"].sum().reset_index()
+    df_to_group = df.copy()
+    df_to_group["mes"] = df_to_group["fecha"].dt.to_period("M")
+    monthly = df_to_group.groupby("mes")["total"].sum().reset_index()
     monthly["mes"] = monthly["mes"].astype(str)
     return monthly

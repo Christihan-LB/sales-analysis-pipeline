@@ -1,7 +1,7 @@
-version: "3.9"
+version: "3.11"
 services:
   pipeline:
     build: .
     volumes:
       - ./data:/app/data
-    command: python src/main.py
+    command: python -m src.main

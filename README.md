@@ -44,7 +44,7 @@ venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 
 # Run analysis
-python src/main.py
+python -m src.main
 ```
 ### 🔹 Option 2 — Docker
 
@@ -62,7 +62,7 @@ docker run --rm -v $(pwd)/data:/app/data sales-analysis
 -	Database: data/processed/sales.db
 -	Graph: data/processed/grafico.png
 
-Example SQL query for the Top 3 most sold products (see docs/database.md):
+Example SQL query for the Top 3 most sold products (see docs/database.md and also in query.sql file):
 ```sql
 SELECT producto, SUM(cantidad) as total_vendida
 FROM ventas
@@ -70,7 +70,10 @@ GROUP BY producto
 ORDER BY total_vendida DESC
 LIMIT 3;
 ```
-
+To connect to the database run the following command:
+```bash
+sqlite3 data/processed/ventas.db
+```
 ⸻
 
 ## 🧪 Testing
@@ -102,22 +105,23 @@ sales-analysis/
 │   │   └── __init__.py
 │   │   └── data_loader.py
 │   │   └── preprocessing.py
+│   │   └── analysis.py
+│   │   └── db.py
+│   │   └── visualization.py
 │   ├── __init__.py
 │   ├── config.py
-│   ├── analysis.py
-│   ├── db.py
-│   ├── visualization.py
 │   └── main.py
 ├── tests/              # Unit tests
 │   ├── __init__.py
-│   └── test_calculations.py
+│   └── test_processing.py
 ├── Dockerfile
 ├── docker-compose.yml
 ├── environment.yml
 ├── requirements.txt
 ├── pytest.ini
-└── README.md
-└── LICENSE
+├── README.md
+├── LICENSE
+└── query.sql
 ```
 
 ⸻

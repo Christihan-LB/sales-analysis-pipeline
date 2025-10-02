@@ -1,5 +1,5 @@
 import pandas as pd
-from .config import VENTAS_FILE
+from ..config import VENTAS_FILE
 
 
 def load_sales_data() -> pd.DataFrame:

@@ -2,9 +2,6 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.db
 .env
 venv/
 .venv/
-data/processed/*
-!data/processed/.gitkeep

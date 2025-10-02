@@ -1,5 +1,5 @@
 import pandas as pd
-from src.preprocessing import clean_sales_data
+from src.sales_pipeline.preprocessing import clean_sales_data
 
 
 def test_total_column_is_correct():

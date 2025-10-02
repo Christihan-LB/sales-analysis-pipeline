@@ -10,4 +10,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src/ ./src
 COPY data/raw/ ./data/raw
 
-CMD ["python", "src/main.py"]
+CMD ["python", "-m", "src.main"]

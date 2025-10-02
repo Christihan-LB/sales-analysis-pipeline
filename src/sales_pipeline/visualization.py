@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-from .config import PROCESSED_DATA_DIR
+from ..config import PROCESSED_DATA_DIR
 
 
 def plot_revenue_per_month(monthly: pd.DataFrame):

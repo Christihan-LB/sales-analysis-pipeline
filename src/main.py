@@ -1,8 +1,8 @@
-from .data_loader import load_sales_data
-from .preprocessing import clean_sales_data
-from .analysis import product_most_sold, product_highest_revenue, revenue_per_month   # noqa: E501
-from .db import save_to_db, get_top_products
-from .visualization import plot_revenue_per_month
+from .sales_pipeline.data_loader import load_sales_data
+from .sales_pipeline.preprocessing import clean_sales_data
+from .sales_pipeline.analysis import product_most_sold, product_highest_revenue, revenue_per_month   # noqa: E501
+from .sales_pipeline.db import save_to_db, get_top_products
+from .sales_pipeline.visualization import plot_revenue_per_month
 
 
 def main():
